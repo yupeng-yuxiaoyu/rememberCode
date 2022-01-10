@@ -12,14 +12,13 @@
 function insertSort(arr) {
   const len = arr.length
   let preIndex, current
-  for(let i = 1; i < len; i++) {
+  for (let i = 1; i < len; i++) {
     preIndex = i - 1
     current = arr[i]
-    while(preIndex >= 0 && arr[preIndex] > current) {
-      arr[preIndex + 1] = arr[preIndex]
-      preIndex--
+    while (preIndex >= 0 && arr[preIndex] > current) {
+      arr[i] = arr[preIndex--]
     }
-    arr[preIndex+1] = current
+    arr[preIndex + 1] = current
   }
   return arr
 }

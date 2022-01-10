@@ -14,3 +14,19 @@ function binarySearch(arr, target) {
   }
   return -1
 }
+
+function fn(arr, target) {
+  let min = 0;
+  let max = arr.length - 1;
+  while (min <= max) {
+    const middleIndex = Math.floor((arr.length / 2));
+    if (target > arr[middleIndex]) {
+      min = middleIndex + 1;
+    } else if (target < arr[middleIndex]) {
+      max = middleIndex - 1;
+    } else {
+      return middleIndex;
+    }
+  }
+  return -1;
+}

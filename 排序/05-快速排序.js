@@ -20,7 +20,22 @@ function quickSort(arr) {
       right.push(arr[i])
     }
   }
-  return quickSort(left).concat([privot], quickSort(right))
+  return quickSort(left).concat(privot, quickSort(right))
 }
 const arr = [2, 4, 6, 1, 3]
 console.log(quickSort(arr))
+
+function fn(arr) {
+  const middleIndex = Math.floor(arr.length / 2);
+  const middle = arr.splice(middleIndex, 1);
+  const left = [];
+  const right = []
+  for (let i = 0; i < array.length; i++) {
+    if (arr[i] > middle) {
+      right.push(arr[i]);
+    } else {
+      left.push(arr[i]);
+    }
+  }
+  return fn(left).concat(middle, fn(right));
+}

@@ -29,3 +29,18 @@ function selectSort(arr) {
 
 const arr = [2, 4, 6, 1, 3]
 console.log(selectSort(arr))
+
+// function fn(arr) {
+//   const len = arr.length;
+//   for (let i = 0; i < len - 1; i++) {
+//     let minIndex = i;
+//     for (let j = i + 1; j < len; j++) {
+//       if (arr[minIndex] > arr[j]) {
+//         minIndex = j;
+//       }
+//       if (i !== minIndex) {
+//         [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]]
+//       }
+//     }
+//   }
+// }
