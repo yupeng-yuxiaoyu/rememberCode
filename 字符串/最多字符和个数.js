@@ -7,10 +7,10 @@ str = str.split('').sort().join('');
 // "aaabbbbbcccccccc"
 // 定义正则表达式
 let re = /(\w)\1+/g;
-str.replace(re, ($0, $1) => {
-  if (num < $0.length) {
-    num = $0.length;
-    char = $1;
+str.replace(re, (value, item) => {
+  if (num < value.length) {
+    num = value.length;
+    char = item;
   }
 });
 console.log(`字符最多的是${char}，出现了${num}次`);

@@ -11,7 +11,7 @@ function SubType(name, age){
   SuperType.call(this, name)
   this.age = age
 }
-SubType.prototype = Object.create(Super.prototype)
+SubType.prototype = Object.create(SuperType.prototype)
 SubType.prototype.constructor = SubType
 
 SubType.prototype.sayAge = function() {

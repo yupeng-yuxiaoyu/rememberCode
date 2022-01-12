@@ -9,3 +9,5 @@ function parseToMoney(num) {
   return integer + (decimal ? '.' + decimal : '');
 }
 console.log(parseToMoney(123456789));
+
+// reg = /\d(?=(\d{3})+$)/g $&,

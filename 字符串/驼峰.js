@@ -5,3 +5,7 @@ var f = function (s) {
     return x.slice(1).toUpperCase();
   })
 }
+
+str.replace(/-\w/g, function(x) {
+  return x.slice(1).toUpperCase();
+})
