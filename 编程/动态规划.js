@@ -43,3 +43,4 @@ function serialArray(arr) {
   }
   return result
 }
+console.log(serialArray([['A','B'], ['a','b'], ['1', '2']]))
