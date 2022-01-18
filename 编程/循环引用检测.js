@@ -1,5 +1,5 @@
 function hasCircle(obj) {
-  let hasCircle = false
+  let res = false
   const map = new Map()
   function loop(obj) {
     const keys = Object.keys(obj)
@@ -7,7 +7,7 @@ function hasCircle(obj) {
       const value = obj[key]
       if (typeof value == 'object' && value !== null) {
         if (map.has(value)) {
-          hasCircle = true
+          res = true
           return
         } else {
           map.set(value)
@@ -17,7 +17,7 @@ function hasCircle(obj) {
     })
   }
   loop(obj)
-  return hasCircle
+  return res
 }
 const obj = {
   a: 1,
