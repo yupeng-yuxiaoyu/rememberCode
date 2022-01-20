@@ -22,6 +22,23 @@ const throttle = (fn, delay = 500) => {
     }, delay);
   };
 }
+// 第一次不执行
+const throttle = (fn, delay = 500) => {
+  let flag = true;
+  let index = 0;
+  return (...args) => {
+    if (index > 0) {
+      if (!flag) return;
+      flag = false;
+      setTimeout(() => {
+        fn.apply(this, args);
+        flag = true;
+      }, delay);
+    } else {
+      index++;
+    }
+  };
+}
 // 自执行版
 function debounce(fn, wait = 1000, immediate = false) {
   let timer = null

@@ -23,7 +23,6 @@ var nextPermutation = function (nums) {
   let i = nums.length - 2;
   // 从后往前找到第一个降序的,相当于找到了我们的回溯点
   while (i > -1 && nums[i + 1] <= nums[i]) i--;
-
   // 如果找了就swap
   if (i > -1) {
     let j = nums.length - 1;
@@ -40,3 +39,6 @@ var nextPermutation = function (nums) {
 
   reverseRange(nums, i + 1, nums.length - 1);
 };
+const nums = [1,2,3,4]
+nextPermutation(nums);
+console.log('num :>> ', nums);
