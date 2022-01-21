@@ -30,3 +30,31 @@ var postorderTraversal = function (root, array = []) {
   }
   return array;
 };
+
+/*
+  广度优先遍历：使用队列实现
+*/
+function levelOrderTravel(nodeTree) {
+  // 如果树为空，结束
+  if(!nodeTree) return;
+  // 初始化一个队列
+  let queue = []
+  // 将根节点入队
+  queue.push(nodeTree)
+  let node = null
+  // 只要队列不为空，继续循环
+  while(queue.length) {
+    // 按顺序取出队列中最早入队的节点
+    node = queue.shift()
+    console.log(node.data);
+    // 如果出队节点存在左孩子，就将其左孩子入队
+    if(node.left) {
+      queue.push(node.left)
+    }
+    // 如果出队节点存在右孩子，就将其右孩子入队
+    if(node.right) {
+      queue.push(node.right)
+    }
+  }
+}
+console.log("广度优先遍历-使用队列实现:");
