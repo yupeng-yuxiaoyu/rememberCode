@@ -23,3 +23,19 @@ for (var value of iterable) {
 // 0
 // 1
 // 2
+let range = {
+  from: 1,
+  to: 5,
+  // [Symbol.iterator]: function() {
+  //   return {
+  //     i: this.from
+  //     next: function() {
+  //       if(i <= this.to) {
+  //         return { done: false, value: i ++}
+  //       } else {
+  //         return { done: true, value: undefined}
+  //       }
+  //     }
+  //   }    
+  // }
+};
