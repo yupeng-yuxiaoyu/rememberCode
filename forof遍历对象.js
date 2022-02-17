@@ -26,16 +26,19 @@ for (var value of iterable) {
 let range = {
   from: 1,
   to: 5,
-  // [Symbol.iterator]: function() {
-  //   return {
-  //     i: this.from
-  //     next: function() {
-  //       if(i <= this.to) {
-  //         return { done: false, value: i ++}
-  //       } else {
-  //         return { done: true, value: undefined}
-  //       }
-  //     }
-  //   }    
-  // }
+  [Symbol.iterator]: function() {
+    return {
+      i: this.from,
+      next: function() {
+        if(this.i <= this.to) {
+          return { done: false, value: this.i++}
+        } else {
+          return { done: true, value: undefined}
+        }
+      }
+    }    
+  }
 };
+for (var value of range) {
+  console.log(value);
+}
